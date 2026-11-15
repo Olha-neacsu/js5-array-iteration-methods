@@ -178,3 +178,164 @@
 // console.log(getDrinkCodes(['Tea'])); // ['TEA']
 
 //7--------------------------------------------------------------------------
+/*
+ * Функція getPriceList(services) повертає новий масив рядків для прайсу.
+ *   services — масив обʼєктів з властивостями name і price.
+ * 1. Оголоси getPriceList як стрілочну функцію.
+ * 2. Перебери масив services методом map().
+ * 3. У колбеку поверни рядок у форматі 'Cleaning: 450 UAH'.
+ * 4. Поверни новий масив, який дав map().
+ */
+
+// Твій код тут
+
+// const getPriceList = (services) => {
+//   return services.map((service) => {
+//     return `${service.name}: ${service.price} UAH`;
+//   });
+// };
+
+// console.log(
+//   getPriceList([
+//     { name: 'Cleaning', price: 450 },
+//     { name: 'Whitening', price: 1200 },
+//     { name: 'Filling', price: 800 },
+//   ]),
+// );
+// // ['Cleaning: 450 UAH', 'Whitening: 1200 UAH', 'Filling: 800 UAH']
+
+// console.log(
+//   getPriceList([
+//     { name: 'Crown', price: 3500 },
+//     { name: 'Implant', price: 9000 },
+//   ]),
+// );
+// // ['Crown: 3500 UAH', 'Implant: 9000 UAH']
+
+//8-----------------------------------------------------------------
+/*
+ * Функція getUserEmails(users) повертає масив поштових адрес користувачів.
+ *   users — масив обʼєктів користувачів.
+ * 1. Оголоси getUserEmails як стрілочну функцію.
+ * 2. Перебери масив users методом map().
+ * 3. У колбеку поверни значення властивості email поточного користувача.
+ * 4. Поверни новий масив, який дав map().
+ */
+
+// const allUsers = [
+//   {
+//     name: 'Alex',
+//     email: 'alex@indexia.com',
+//     eyeColor: 'blue',
+//     friends: ['Sam'],
+//     isActive: false,
+//     balance: 2811,
+//     skills: ['html', 'css'],
+//     gender: 'male',
+//     age: 37,
+//   },
+//   {
+//     name: 'Nora',
+//     email: 'nora@tubesys.com',
+//     eyeColor: 'blue',
+//     friends: ['Kim', 'Sam'],
+//     isActive: true,
+//     balance: 3821,
+//     skills: ['figma', 'html', 'css', 'testing', 'git'],
+//     gender: 'female',
+//     age: 34,
+//   },
+//   {
+//     name: 'Max',
+//     email: 'max@xinware.com',
+//     eyeColor: 'green',
+//     friends: ['Leo', 'Iris', 'Kim'],
+//     isActive: false,
+//     balance: 3793,
+//     skills: ['sql', 'node', 'git', 'html', 'javascript'],
+//     gender: 'male',
+//     age: 24,
+//   },
+//   {
+//     name: 'Iris',
+//     email: 'iris@omatom.com',
+//     eyeColor: 'green',
+//     friends: ['Nora', 'Leo'],
+//     isActive: true,
+//     balance: 2278,
+//     skills: ['react', 'javascript', 'css'],
+//     gender: 'female',
+//     age: 21,
+//   },
+//   {
+//     name: 'Sam',
+//     email: 'sam@nurali.com',
+//     eyeColor: 'blue',
+//     friends: ['Alex', 'Max'],
+//     isActive: true,
+//     balance: 3951,
+//     skills: ['git', 'node', 'sql'],
+//     gender: 'male',
+//     age: 27,
+//   },
+//   {
+//     name: 'Leo',
+//     email: 'leo@furnigeer.com',
+//     eyeColor: 'brown',
+//     friends: ['Iris', 'Kim'],
+//     isActive: false,
+//     balance: 1498,
+//     skills: ['testing', 'html', 'figma'],
+//     gender: 'male',
+//     age: 38,
+//   },
+//   {
+//     name: 'Kim',
+//     email: 'kim@kog.com',
+//     eyeColor: 'brown',
+//     friends: ['Nora', 'Max'],
+//     isActive: true,
+//     balance: 2764,
+//     skills: ['javascript', 'react', 'node'],
+//     gender: 'female',
+//     age: 39,
+//   },
+// ];
+
+// // Твій код тут
+
+// // const getUserEmails = (users) => {
+// //   return users.map((user) => user.email);
+// // };
+
+// const getUserEmails = (users) => users.map((user) => user.email);
+
+// console.log(getUserEmails(allUsers));
+// // ['alex@indexia.com', 'nora@tubesys.com', 'max@xinware.com',
+// //  'iris@omatom.com', 'sam@nurali.com', 'leo@furnigeer.com', 'kim@kog.com']
+
+//9----------------------------------------------------------------
+/*
+ * Функція getPricesInRange(prices, minPrice, maxPrice) повертає новий масив
+ * з цін, які входять у діапазон від minPrice до maxPrice включно.
+ *   prices — масив цін (числа).
+ *   minPrice, maxPrice — межі діапазону.
+ * 1. Оголоси getPricesInRange як стрілочну функцію.
+ * 2. Перебери масив prices методом filter().
+ * 3. У колбеку поверни true лише для тих цін, які не менші за minPrice
+ *    і не більші за maxPrice.
+ * 4. Поверни новий масив, який дав filter().
+ */
+
+// const menuPrices = [55, 120, 40, 85, 95, 25, 150];
+
+// // Твій код тут
+
+// const getPricesInRange = (prices, minPrice, maxPrice) =>
+//   prices.filter((price) => price >= minPrice && price <= maxPrice);
+
+// console.log(getPricesInRange(menuPrices, 50, 100)); // [55, 85, 95]
+// console.log(getPricesInRange(menuPrices, 25, 45)); // [40, 25]
+// console.log(getPricesInRange(menuPrices, 200, 300)); // []
+
+//10--------------------------------------------------------------
