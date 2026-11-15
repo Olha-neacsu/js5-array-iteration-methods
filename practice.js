@@ -82,3 +82,99 @@
 // // 900
 
 //4---------------------------------------------------------------
+/*
+ * Функція describeOrder() приймає будь-яку кількість назв напоїв
+ * і повертає опис замовлення у форматі:
+ * 'Espresso, Latte, Americano | items: 3'
+ * тобто назви через кому, потім ' | items: ' і кількість напоїв.
+ * 1. Оголоси describeOrder як стрілочну функцію.
+ * 2. Збери всі аргументи в масив drinks через залишкові параметри.
+ * 3. Поверни рядок цього формату, склавши його шаблонним рядком.
+ * 4. Використай неявне повернення.
+ */
+
+// Твій код тут
+
+// const describeOrder = (...drinks) =>
+//   `${drinks.join(', ')} | item: ${drinks.length}`;
+
+// // const describeOrder = (...drinks) => {
+// //   const items = drinks.join(', ');
+// //   return `${items} | item: ${drinks.length}`;
+// // };
+
+// console.log(describeOrder('Espresso', 'Latte', 'Americano'));
+// // Espresso, Latte, Americano | items: 3
+
+// console.log(describeOrder('Cappuccino', 'Latte'));
+// // Cappuccino, Latte | items: 2
+
+// console.log(describeOrder('Espresso'));
+// // Espresso | items: 1
+
+//5--------------------------------------------------------------------
+/*
+ * Нижче три виклики forEach() зі звичайними функціями-колбеками.
+ * 1. Перепиши кожен колбек стрілочною функцією.
+ * 2. Скороти кожен запис настільки, наскільки дозволяють
+ *    його параметри й тіло.
+ * 3. Вивід у консоль має лишитись тим самим.
+ */
+
+// const services = ['Cleaning', 'Whitening', 'Filling'];
+// const prices = [450, 1200, 800];
+
+// services.forEach((service) => console.log(service));
+
+// // services.forEach(function (service) {
+// //     console.log(service);
+
+// // Cleaning
+// // Whitening
+// // Filling
+
+// prices.forEach((price, index) => console.log(`${index + 1}. ${price} UAH`));
+
+// // prices.forEach(function (price, index) {
+// //   console.log(`${index + 1}. ${price} UAH`);
+// // });
+// // 1. 450 UAH
+// // 2. 1200 UAH
+// // 3. 800 UAH
+
+// prices.forEach(function (price) {
+//   const priceWithTax = price * 1.2;
+//   console.log(priceWithTax);
+// });
+
+// // 540
+// // 1440
+// // 960
+
+//6----------------------------------------------------------------
+/*
+ * Функція getDrinkCodes(drinks) повертає новий масив кодів напоїв для каси.
+ * Код — це перші три літери назви у верхньому регістрі.
+ *   drinks — масив назв напоїв (рядки).
+ * 1. Оголоси getDrinkCodes як стрілочну функцію.
+ * 2. Перебери масив drinks методом map().
+ * 3. У колбеку збережи перші три літери назви у змінну shortName
+ *    за допомогою методу slice().
+ * 4. Поверни з колбека shortName у верхньому регістрі.
+ * 5. Поверни новий масив, який дав map().
+ */
+
+// Твій код тут
+
+// const getDrinkCodes = (drinks) => {
+//   return drinks.map((drink) => {
+//     const shortName = drink.slice(0, 3);
+//     return shortName.toUpperCase();
+//   });
+// };
+
+// console.log(getDrinkCodes(['Espresso', 'Cappuccino', 'Latte'])); // ['ESP', 'CAP', 'LAT']
+// console.log(getDrinkCodes(['Americano', 'Mocha'])); // ['AME', 'MOC']
+// console.log(getDrinkCodes(['Tea'])); // ['TEA']
+
+//7--------------------------------------------------------------------------
