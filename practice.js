@@ -595,3 +595,241 @@
 // // []
 
 //13-------------------------------------------------------------------------
+/*
+ * Масив books містить книги з властивостями title, author і rating.
+ * 1. Оголоси змінну bookWithTitle і поклади в неї обʼєкт книги,
+ *    назва якої збігається зі значенням змінної bookTitle.
+ *    Використай метод find().
+ * 2. Оголоси змінну bookByAuthor і поклади в неї обʼєкт книги,
+ *    автор якої збігається зі значенням змінної author.
+ */
+
+// const books = [
+//   { title: 'Silent Harbor', author: 'Alex', rating: 8.38 },
+//   { title: 'Paper Moons', author: 'Nora', rating: 8.51 },
+//   { title: 'The Glass Garden', author: 'Leo', rating: 7.75 },
+//   { title: 'North of Winter', author: 'Kim', rating: 7.94 },
+//   { title: 'Ashes and Salt', author: 'Alex', rating: 8.67 },
+// ];
+
+// const bookTitle = 'The Glass Garden';
+// const author = 'Alex';
+
+// // Твій код тут
+
+// const bookByAuthor = books.find((book) => book.author === author);
+// const bookWithTitle = books.find((book) => book.title === bookTitle);
+
+// console.log(bookWithTitle);
+// // { title: 'The Glass Garden', author: 'Leo', rating: 7.75 }
+
+// console.log(bookByAuthor);
+// // { title: 'Silent Harbor', author: 'Alex', rating: 8.38 }
+
+//14----------------------------------------------------------------
+/*
+ * Функція getUserWithEmail(users, email) повертає обʼєкт користувача,
+ * пошта якого збігається зі значенням параметра email.
+ *   users — масив обʼєктів користувачів.
+ *   email — поштова адреса (рядок).
+ * 1. Оголоси getUserWithEmail як стрілочну функцію.
+ * 2. Перебери масив users методом find().
+ * 3. У колбеку поверни true для того користувача, у якого властивість
+ *    email дорівнює параметру email.
+ * 4. Поверни результат find().
+ */
+
+// const allUsers = [
+//   {
+//     name: 'Alex',
+//     email: 'alex@indexia.com',
+//     eyeColor: 'blue',
+//     friends: ['Sam'],
+//     isActive: false,
+//     balance: 2811,
+//     skills: ['html', 'css'],
+//     gender: 'male',
+//     age: 37,
+//   },
+//   {
+//     name: 'Nora',
+//     email: 'nora@tubesys.com',
+//     eyeColor: 'blue',
+//     friends: ['Kim', 'Sam'],
+//     isActive: true,
+//     balance: 3821,
+//     skills: ['figma', 'html', 'css', 'testing', 'git'],
+//     gender: 'female',
+//     age: 34,
+//   },
+//   {
+//     name: 'Max',
+//     email: 'max@xinware.com',
+//     eyeColor: 'green',
+//     friends: ['Leo', 'Iris', 'Kim'],
+//     isActive: false,
+//     balance: 3793,
+//     skills: ['sql', 'node', 'git', 'html', 'javascript'],
+//     gender: 'male',
+//     age: 24,
+//   },
+//   {
+//     name: 'Iris',
+//     email: 'iris@omatom.com',
+//     eyeColor: 'green',
+//     friends: ['Nora', 'Leo'],
+//     isActive: true,
+//     balance: 2278,
+//     skills: ['react', 'javascript', 'css'],
+//     gender: 'female',
+//     age: 21,
+//   },
+//   {
+//     name: 'Sam',
+//     email: 'sam@nurali.com',
+//     eyeColor: 'blue',
+//     friends: ['Alex', 'Max'],
+//     isActive: true,
+//     balance: 3951,
+//     skills: ['git', 'node', 'sql'],
+//     gender: 'male',
+//     age: 27,
+//   },
+//   {
+//     name: 'Leo',
+//     email: 'leo@furnigeer.com',
+//     eyeColor: 'brown',
+//     friends: ['Iris', 'Kim'],
+//     isActive: false,
+//     balance: 1498,
+//     skills: ['testing', 'html', 'figma'],
+//     gender: 'male',
+//     age: 38,
+//   },
+//   {
+//     name: 'Kim',
+//     email: 'kim@kog.com',
+//     eyeColor: 'brown',
+//     friends: ['Nora', 'Max'],
+//     isActive: true,
+//     balance: 2764,
+//     skills: ['javascript', 'react', 'node'],
+//     gender: 'female',
+//     age: 39,
+//   },
+// ];
+
+// // Твій код тут
+
+// const getUserWithEmail = (users, email) =>
+//   users.find((user) => email === user.email);
+
+// console.log(getUserWithEmail(allUsers, 'kim@kog.com'));
+// // Обʼєкт користувача Kim
+
+// console.log(getUserWithEmail(allUsers, 'iris@omatom.com'));
+// // Обʼєкт користувача Iris
+
+// console.log(getUserWithEmail(allUsers, 'unknown@mail.com'));
+// // undefined
+
+//15---------------------------------------------------------
+/*
+ * Функція calculateTotalBalance(users) повертає суму коштів усіх користувачів.
+ *   users — масив обʼєктів користувачів.
+ * 1. Оголоси calculateTotalBalance як стрілочну функцію.
+ * 2. Перебери масив users методом reduce() з початковим значенням 0.
+ * 3. У колбеку додай до накопиченого значення властивість balance
+ *    поточного користувача.
+ * 4. Поверни результат reduce().
+ */
+
+// const allUsers = [
+//   {
+//     name: 'Alex',
+//     email: 'alex@indexia.com',
+//     eyeColor: 'blue',
+//     friends: ['Sam'],
+//     isActive: false,
+//     balance: 2811,
+//     skills: ['html', 'css'],
+//     gender: 'male',
+//     age: 37,
+//   },
+//   {
+//     name: 'Nora',
+//     email: 'nora@tubesys.com',
+//     eyeColor: 'blue',
+//     friends: ['Kim', 'Sam'],
+//     isActive: true,
+//     balance: 3821,
+//     skills: ['figma', 'html', 'css', 'testing', 'git'],
+//     gender: 'female',
+//     age: 34,
+//   },
+//   {
+//     name: 'Max',
+//     email: 'max@xinware.com',
+//     eyeColor: 'green',
+//     friends: ['Leo', 'Iris', 'Kim'],
+//     isActive: false,
+//     balance: 3793,
+//     skills: ['sql', 'node', 'git', 'html', 'javascript'],
+//     gender: 'male',
+//     age: 24,
+//   },
+//   {
+//     name: 'Iris',
+//     email: 'iris@omatom.com',
+//     eyeColor: 'green',
+//     friends: ['Nora', 'Leo'],
+//     isActive: true,
+//     balance: 2278,
+//     skills: ['react', 'javascript', 'css'],
+//     gender: 'female',
+//     age: 21,
+//   },
+//   {
+//     name: 'Sam',
+//     email: 'sam@nurali.com',
+//     eyeColor: 'blue',
+//     friends: ['Alex', 'Max'],
+//     isActive: true,
+//     balance: 3951,
+//     skills: ['git', 'node', 'sql'],
+//     gender: 'male',
+//     age: 27,
+//   },
+//   {
+//     name: 'Leo',
+//     email: 'leo@furnigeer.com',
+//     eyeColor: 'brown',
+//     friends: ['Iris', 'Kim'],
+//     isActive: false,
+//     balance: 1498,
+//     skills: ['testing', 'html', 'figma'],
+//     gender: 'male',
+//     age: 38,
+//   },
+//   {
+//     name: 'Kim',
+//     email: 'kim@kog.com',
+//     eyeColor: 'brown',
+//     friends: ['Nora', 'Max'],
+//     isActive: true,
+//     balance: 2764,
+//     skills: ['javascript', 'react', 'node'],
+//     gender: 'female',
+//     age: 39,
+//   },
+// ];
+
+// // Твій код тут
+
+// const calculateTotalBalance = (users) => {
+//   return users.reduce((sum, user) => sum + user.balance, 0);
+// };
+
+// console.log(calculateTotalBalance(allUsers)); // 20916
+
+//16------------------------------------------------------------------
