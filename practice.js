@@ -833,3 +833,199 @@
 // console.log(calculateTotalBalance(allUsers)); // 20916
 
 //16------------------------------------------------------------------
+/*
+ * Онлайн-бібліотека показує книги за роком видання — від старіших
+ * до новіших або навпаки.
+ * 1. Оголоси змінну ascendingReleaseYears і поклади в неї копію масиву
+ *    releaseYears, відсортовану за зростанням. Використай метод toSorted()
+ *    з функцією порівняння.
+ * 2. Оголоси змінну descendingReleaseYears і поклади в неї копію масиву
+ *    releaseYears, відсортовану за спаданням.
+ */
+
+// const releaseYears = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+
+// // Твій код тут
+
+// const ascendingReleaseYears = releaseYears.toSorted((a, b) => a - b);
+// const descendingReleaseYears = releaseYears.toSorted((a, b) => b - a);
+
+// console.log(ascendingReleaseYears);
+// // [1967, 1973, 1984, 1997, 2008, 2012, 2016]
+
+// console.log(descendingReleaseYears);
+// // [2016, 2012, 2008, 1997, 1984, 1973, 1967]
+
+//17------------------------------------------------------
+/*
+ * Онлайн-бібліотека показує список книг у різному порядку.
+ * Масив books містить обʼєкти з властивостями title, author і rating.
+ * 1. Оголоси змінну sortedByAscendingRating і поклади в неї копію масиву
+ *    books, відсортовану за зростанням рейтингу.
+ * 2. Оголоси змінну sortedByDescendingRating і поклади в неї копію масиву
+ *    books, відсортовану за спаданням рейтингу.
+ * Обидва рази використай метод toSorted() з функцією порівняння.
+ */
+
+// const books = [
+//   { title: 'Silent Harbor', author: 'Alex', rating: 8.38 },
+//   { title: 'Paper Moons', author: 'Nora', rating: 8.51 },
+//   { title: 'The Glass Garden', author: 'Leo', rating: 7.75 },
+//   { title: 'North of Winter', author: 'Kim', rating: 7.94 },
+//   { title: 'Ashes and Salt', author: 'Alex', rating: 8.67 },
+// ];
+
+// // Твій код тут
+
+// const sortedByAscendingRating = books.toSorted((a, b) => a.rating - b.rating);
+// const sortedByDescendingRating = books.toSorted((a, b) => b.rating - a.rating);
+
+// console.log(sortedByAscendingRating);
+// // [
+// //   { title: 'The Glass Garden', author: 'Leo', rating: 7.75 },
+// //   { title: 'North of Winter', author: 'Kim', rating: 7.94 },
+// //   { title: 'Silent Harbor', author: 'Alex', rating: 8.38 },
+// //   { title: 'Paper Moons', author: 'Nora', rating: 8.51 },
+// //   { title: 'Ashes and Salt', author: 'Alex', rating: 8.67 }
+// // ]
+
+// console.log(sortedByDescendingRating);
+// // [
+// //   { title: 'Ashes and Salt', author: 'Alex', rating: 8.67 },
+// //   { title: 'Paper Moons', author: 'Nora', rating: 8.51 },
+// //   { title: 'Silent Harbor', author: 'Alex', rating: 8.38 },
+// //   { title: 'North of Winter', author: 'Kim', rating: 7.94 },
+// //   { title: 'The Glass Garden', author: 'Leo', rating: 7.75 }
+// // ]
+
+//18------------------------------------------------------------
+/*
+ * Онлайн-бібліотека показує назви найкраще оцінених книг.
+ * Масив books містить обʼєкти з властивостями title, author і rating.
+ * 1. Оголоси змінну topRatedTitles і поклади в неї масив назв книг,
+ *    рейтинг яких не менший за minRating.
+ * 2. Зроби це одним ланцюжком з методів filter() і map().
+ *    Проміжних змінних бути не повинно.
+ */
+
+// const books = [
+//   { title: 'Silent Harbor', author: 'Alex', rating: 8.38 },
+//   { title: 'Paper Moons', author: 'Nora', rating: 8.51 },
+//   { title: 'The Glass Garden', author: 'Leo', rating: 7.75 },
+//   { title: 'North of Winter', author: 'Kim', rating: 7.94 },
+//   { title: 'Ashes and Salt', author: 'Alex', rating: 8.67 },
+// ];
+
+// const minRating = 8;
+
+// // Твій код тут
+
+// const topRatedTitles = books
+//   .filter((book) => book.rating >= minRating)
+//   .map((book) => book.title);
+
+// console.log(topRatedTitles);
+// // ['Silent Harbor', 'Paper Moons', 'Ashes and Salt']
+
+//19----------------------------------------------------
+/*
+ * Функція getActiveNamesByBalance(users) повертає масив імен
+ * активних користувачів, відсортованих за балансом від найбільшого.
+ *   users — масив обʼєктів користувачів.
+ * 1. Оголоси getActiveNamesByBalance як стрілочну функцію.
+ * 2. Одним ланцюжком: відбери користувачів, у яких isActive дорівнює true,
+ *    відсортуй їх за balance від найбільшого до найменшого й дістань їхні імена.
+ * 3. Використай методи filter(), toSorted() і map().
+ *    Проміжних змінних бути не повинно.
+ */
+
+// const allUsers = [
+//   {
+//     name: 'Alex',
+//     email: 'alex@indexia.com',
+//     eyeColor: 'blue',
+//     friends: ['Sam'],
+//     isActive: false,
+//     balance: 2811,
+//     skills: ['html', 'css'],
+//     gender: 'male',
+//     age: 37,
+//   },
+//   {
+//     name: 'Nora',
+//     email: 'nora@tubesys.com',
+//     eyeColor: 'blue',
+//     friends: ['Kim', 'Sam'],
+//     isActive: true,
+//     balance: 3821,
+//     skills: ['figma', 'html', 'css', 'testing', 'git'],
+//     gender: 'female',
+//     age: 34,
+//   },
+//   {
+//     name: 'Max',
+//     email: 'max@xinware.com',
+//     eyeColor: 'green',
+//     friends: ['Leo', 'Iris', 'Kim'],
+//     isActive: false,
+//     balance: 3793,
+//     skills: ['sql', 'node', 'git', 'html', 'javascript'],
+//     gender: 'male',
+//     age: 24,
+//   },
+//   {
+//     name: 'Iris',
+//     email: 'iris@omatom.com',
+//     eyeColor: 'green',
+//     friends: ['Nora', 'Leo'],
+//     isActive: true,
+//     balance: 2278,
+//     skills: ['react', 'javascript', 'css'],
+//     gender: 'female',
+//     age: 21,
+//   },
+//   {
+//     name: 'Sam',
+//     email: 'sam@nurali.com',
+//     eyeColor: 'blue',
+//     friends: ['Alex', 'Max'],
+//     isActive: true,
+//     balance: 3951,
+//     skills: ['git', 'node', 'sql'],
+//     gender: 'male',
+//     age: 27,
+//   },
+//   {
+//     name: 'Leo',
+//     email: 'leo@furnigeer.com',
+//     eyeColor: 'brown',
+//     friends: ['Iris', 'Kim'],
+//     isActive: false,
+//     balance: 1498,
+//     skills: ['testing', 'html', 'figma'],
+//     gender: 'male',
+//     age: 38,
+//   },
+//   {
+//     name: 'Kim',
+//     email: 'kim@kog.com',
+//     eyeColor: 'brown',
+//     friends: ['Nora', 'Max'],
+//     isActive: true,
+//     balance: 2764,
+//     skills: ['javascript', 'react', 'node'],
+//     gender: 'female',
+//     age: 39,
+//   },
+// ];
+
+// // Твій код тут
+
+// const getActiveNamesByBalance = (users) =>
+//   allUsers
+//     .filter((user) => user.isActive)
+//     .toSorted((a, b) => b.balance - a.balance)
+//     .map((user) => user.name);
+
+// console.log(getActiveNamesByBalance(allUsers));
+// // ['Sam', 'Nora', 'Kim', 'Iris']
